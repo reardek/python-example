@@ -3,4 +3,11 @@ sudo: false
 python:
 - 2.7
 - 3.4
+- 3.6
+
+env:
+- secret="nie taki tajny secret"
+
+before_script:
+- echo -e "moja zmienna to $secret"
 script: py.test -v
